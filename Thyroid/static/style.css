@@ -1,0 +1,92 @@
+@keyframes backgroundChange {
+    0% {
+        background-image: url('thyroid1.jpg');
+    }
+    33% {
+        background-image: url('thyroid2.jpg');
+    }
+    66% {
+        background-image: url('thyroid3.jpg');
+    }
+    100% {
+        background-image: url('thyroid2.jpg');
+    }
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: blueviolet;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: backgroundChange 15s infinite;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    margin: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - 22px); /* Adjust width to account for padding and border */
+}
+
+button {
+    margin: 20px 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(0, 252, 0);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    border-color: grey;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+#a1{
+    padding-top: 1200px;
+
+}
