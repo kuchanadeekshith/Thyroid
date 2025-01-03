@@ -93,7 +93,15 @@ def predict():
     # Make predictions
     pred = model.predict(input_data_encoded)
 
-    return render_template('predict.html', prediction_text=str(pred[0]))
+    # Map numeric predictions (0, 1) to actual class names
+    class_names = {0: 'Compensated Thyroid', 1: 'Negative Thyroid'}
+
+    # Get the predicted class name
+    predicted_class = class_names[pred[0]]
+
+    # Return the class name in the prediction text
+    return render_template('predict.html', prediction_text=predicted_class)
+
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000))
